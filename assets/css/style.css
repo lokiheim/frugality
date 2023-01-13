@@ -1,0 +1,542 @@
+/**
+ * GLOBAL CSS
+ * ------------------------------------------------------------------------- */
+/* Variables */
+:root {
+  --white: #ffffff;
+  --green: #1abc9c;
+  --light-gray: #f3f3f3;
+  --dark-gray: #181818;
+  --black: #000000;
+  --gold: #ffd700;
+  --reddish: #f70e0e;
+  --orange: #dd5a0e;
+}
+
+body {
+  color: var(--dark-gray);
+  font-family: 'Lato', sans-serif;
+  font-size: clamp(16px, 1vw, 18px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 72px);
+}
+
+h2 {
+  font-size: clamp(28px, 2vw, 32px);
+}
+
+h3 {
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+h4 {
+  font-size: clamp(20px, 2vw, 22px);
+}
+
+/* a {
+  color: var(--white);
+  text-transform: uppercase;
+} */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 3rem 1rem;
+}
+
+/* Hello & Welcome: search button  */
+.custom-btn {
+  background-color: var(--gold);
+  font-size: clamp(14px, 1vw, 16px);
+  text-transform: uppercase;
+  font-weight: bold;
+  /* adding transition */
+  transition: 0.5s;
+}
+
+/**
+ * HEADER SECTION
+ * ------------------------------------------------------------------------- */
+header {
+  background-color: var(--black);
+}
+
+/* navbar mild glow effect */
+.nav-link:hover {
+  color: var(--orange);
+  text-shadow: 0 0 5px orange,
+    0 0 25px orange,
+    0 0 50px orange,
+    0 0 100px orange;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: transparent !important;
+}
+
+/* Logo */
+.logo {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.logo img {
+  transform: rotate(8deg);
+}
+
+.logo,
+.logo img {
+  width: 32px;
+  height: auto;
+}
+
+.nav-item {
+  font-size: clamp(13px, 1vw, 14px);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/**
+ * HERO SECTION
+ * ------------------------------------------------------------------------- */
+.hero {
+  background-color: var(--black);
+  margin-bottom: 0;
+  color: var(--white);
+  padding: 3.5rem 1rem;
+}
+
+.hero img {
+  width: 100%;
+}
+
+.hero h1 {
+  padding-top: 40px;
+}
+
+/* Hero - Index */
+.hero-text-container {
+  align-items: center;
+}
+
+.hero-leaves {
+  background: url('../images/leaves.png');
+  position: relative;
+  width: 100px;
+  height: 190px;
+  left: 40px;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.dotted-bg:after {
+  content: '';
+  opacity: 1;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  transform: translateY(-50%);
+  background: url(../images/dot-grid.svg);
+}
+
+.hero .lead {
+  margin: 1.25rem 0;
+  text-align: center;
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: 400;
+}
+
+.hero-button {
+  background-color: var(--gold);
+  color: var(--dark-gray);
+  width: 160px;
+  height: 40px;
+  font-weight: 700;
+  font-size: clamp(14px, 1vw, 16px);
+  /* adding transition */
+  transition: 0.5s;
+  z-index: 5;
+}
+
+/* buttons will be adding a hover effect which includes slight letter spacing and a glow effect */
+.btn:hover {
+  letter-spacing: 0.25em;
+  color: var(--light-gray);
+  /* font-family: 'Playfair Display', serif; font doesn't really work well as uppercase*/
+  font-family: 'Lato', '' sans-serif;
+  background: var(--reddish);
+  /* box-shadow: 0 0 15px; */
+}
+
+.hero-img-container {
+  margin-top: 2.5rem;
+}
+
+/* Hero - Results */
+.hero-results {
+  position: relative;
+  overflow: hidden;
+  /* height: 600px; */
+}
+
+.hero-results .container {
+  position: relative;
+  padding: 2.5rem 0;
+  z-index: 2;
+}
+
+.hero-results h1 {
+  font-size: clamp(20px, 4vw, 48px);
+}
+
+.hero-results .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-results img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 360px;
+}
+
+/**
+ * INSPIRE ME SECTION
+ * ------------------------------------------------------------------------- */
+ #inspireMe {
+   background-color: var(--orange);
+ }
+
+.title-content {
+  padding-bottom: 1.5rem;
+}
+
+.inspire-me .inspire-img {
+  order: 1;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+.inspire-me form {
+  order: 0;
+}
+
+.inspire-me h2 {
+  margin-bottom: 2rem;
+}
+
+/* .inspire-me .custom-btn {
+  margin-top: 1.5rem;
+} */
+
+/**
+ * RANDOM MEAL SECTION
+ * ------------------------------------------------------------------------- */
+.hero-results i,
+#category {
+  color: var(--medium-gray);
+}
+
+.random-meal {
+  padding: 3rem 1rem 0 1rem;
+}
+
+.random-meal .card {
+  position: relative;
+  top: -6.25rem;
+  z-index: 1;
+}
+
+#info {
+  white-space: pre-line;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 1.875rem;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+/**
+ * MEAL INSPIRATION SECTION
+ * ------------------------------------------------------------------------- */
+.mealinspo {
+  background-color: var(--black);
+}
+
+.mealinspo-card {
+  height: 200px;
+}
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 50px;
+}
+
+.meal-inspo {
+  margin-top: 15px;
+}
+
+.meal-text {
+  margin-top: 10px;
+}
+
+/* .meal-img {
+  display: flex;
+  align-items: center;
+} */
+
+/* --------------------------------------Contact  Us-------------------------------------------------------------- */
+body {
+  background-image: url("../images/loneDish.jpg");
+  background-position: center;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  color: var(--white);
+  font-size: 45px;
+  text-align: center;
+}
+
+#contactus {
+  -webkit-box-shadow: 3px 6px 32px 2px rgb(0, 0, 0, 0.72);
+  -moz-box-shadow: 3px 6px 32px 2px rgb(0, 0, 0, 0.72);
+  box-shadow: 3px 6px 32px 2px rgb(0, 0, 0, 0.72);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+input[type=text],
+input[type=Email],
+input[type=Number] {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #cccc;
+  color: var(--white);
+  transition: .3s ease-in-out;
+}
+
+input[type=text]::placeholder,
+input[type=Email]::placeholder,
+input[type=Number]::placeholder {
+  color: var(--white);
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+}
+
+/* had an issue where the transparency was not working now resolved  */
+input[type=text]:focus,
+input[type=text]:hover,
+input[type=Email]:focus,
+input[type=Email]:hover,
+input[type=Number]:focus,
+input[type=Number]:hover {
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  background-color: transparent;
+}
+
+#textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #cccc;
+  color: var(--white);
+  transition: .3s ease-in-out;
+}
+
+#textarea::placeholder {
+  color: var(--white);
+}
+
+#textarea:focus,
+#textarea:hover {
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+
+}
+
+/* centered button (used <center> tag in the html) */
+.text-center {
+  text-align: center;
+}
+
+.btn-info {
+  background-color: var(--gold);
+  color: var(--dark-gray);
+  text-transform: uppercase;
+  width: 160px;
+  height: 40px;
+  font-weight: 700;
+  font-size: clamp(14px, 1vw, 16px);
+  /* adding transition */
+  transition: 0.5s;
+}
+
+.btn-info:hover {
+  letter-spacing: 0.25em;
+  color: var(--light-gray);
+  font-family: 'Lato', sans-serif;
+  background: var(--reddish);
+  /* box-shadow: 0 0 15px; */
+}
+
+
+/**
+ * FOOTER SECTION
+ * ------------------------------------------------------------------------- */
+.footer {
+  background: var(--dark-gray);
+  padding: 20px 0;
+  font-size: 14px;
+  text-align: center;
+  color: var(--light-gray);
+}
+
+/**
+ * MEDIA QUERIES
+ * ------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+
+  /* General */
+  section {
+    padding: 8rem 1rem;
+  }
+
+  /* Logo */
+  .logo {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+  }
+
+  .logo,
+  .logo img {
+    width: 40px;
+  }
+
+  /* Random meal section */
+  .random-meal {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* Hero - Index */
+  .hero {
+    padding: 4.125rem 1rem;
+  }
+
+  .hero-text-container {
+    align-items: flex-start;
+  }
+
+  .hero-leaves {
+    display: block;
+  }
+
+  .hero h1 {
+    padding-top: 0;
+  }
+
+  .dotted-bg:after {
+    top: 50%;
+    left: 0;
+    width: 50%;
+    height: 40%;
+  }
+
+  .hero .lead {
+    padding-right: 80px;
+    margin: 2.5rem 0;
+    text-align: left;
+  }
+
+  /* Hero - Results */
+  .hero-results {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+  }
+
+  .hero-results .container {
+    padding: 4.125rem 0;
+  }
+
+  /* Inspire */
+  .inspire-me form {
+    order: 1;
+  }
+}
+
+@media (min-width: 1480px) {
+
+  /* Container */
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* Drink section */
+/* ------------------------------------------------------------------------------------ */
+ .col-sm-4 {
+  text-align: center; 
+  position: relative;
+}
+
+
+#drink-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(115, 111, 111, 0.6);
+  border-radius: 30px;
+}
